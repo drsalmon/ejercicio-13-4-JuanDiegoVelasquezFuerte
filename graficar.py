@@ -6,9 +6,9 @@ os.system ("g++ pendulo.cpp")
 os.system ("./a.out")
 
 a = np.loadtxt ("datos.dat")
-ly = np.log(np.abs(a[:,1]-a[:,2]))
+t = np.linspace(0.0,12.0,a.shape[0])
 
 plt.figure()
-plt.plot(a[:,0],ly)
+plt.plot(t,np.log(np.abs(a[:,0] - a[:,1])))
 plt.savefig("Lyupanov.png")            
             
